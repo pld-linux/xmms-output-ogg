@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://dl.sourceforge.net/my-xmms-plugs/oggre-%{version}.tar.gz
+# Source0-md5:	247eff58c8310a1f21bb84c46d3e5848
 Patch0:		%{name}-enc.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
