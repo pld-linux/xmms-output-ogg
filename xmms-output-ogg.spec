@@ -2,7 +2,7 @@ Summary:	Ogg Vorbis output plugin for XMMS
 Summary(pl):	Wtyczka dla XMMS kompresuj±ca wyj¶cie do plików Ogg Vorbis
 Name:		xmms-output-ogg
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://dl.sourceforge.net/my-xmms-plugs/oggre-%{version}.tar.gz
@@ -13,12 +13,11 @@ BuildRequires:	automake
 BuildRequires:	libogg-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
+BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 Requires:	xmms
 Provides:	xmms-output-plugin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_xmms_plugin_dir	%(xmms-config --output-plugin-dir)
 
 %description
 This is the oggre output plugin for xmms. It enables you to output all
@@ -46,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libdir=%{_xmms_plugin_dir}
+	libdir=%{xmms_output_plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS
-%attr(755,root,root) %{_xmms_plugin_dir}/*
+%attr(755,root,root) %{xmms_output_plugindir}/*
