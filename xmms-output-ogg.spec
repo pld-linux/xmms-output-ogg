@@ -17,6 +17,8 @@ Requires:	xmms
 Provides:	xmms-output-plugin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_xmms_plugin_dir	%(xmms-config --output-plugin-dir)
+
 %description
 This is the oggre output plugin for xmms. It enables you to output all
 media played using xmms into the Ogg-Vorbis files.
@@ -41,7 +43,9 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	libdir=%{_xmms_plugin_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS
-%attr(755,root,root) %{_libdir}/xmms/Output/*
+%attr(755,root,root) %{_xmms_plugin_dir}/*
