@@ -9,18 +9,21 @@ Source0:	http://dl.sourceforge.net/my-xmms-plugs/oggre-%{version}.tar.gz
 Patch0:		%{name}-enc.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	libogg-devel
+BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	xmms-devel
 Requires:	xmms
 Provides:	xmms-output-plugin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 This is the oggre output plugin for xmms. It enables you to output all
-media played using xmms into the Ogg-Vorbis.
+media played using xmms into the Ogg-Vorbis files.
+
+%description -l pl
+To jest wtyczka wyj¶ciowa oggre dla xmms. Umo¿liwia przekierowanie
+wyj¶cia ca³ego d¼wiêku odgrywanego przez xmms do plików Ogg-Vorbis.
 
 %prep
 %setup -q -n oggre
