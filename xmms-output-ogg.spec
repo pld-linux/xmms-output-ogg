@@ -1,5 +1,5 @@
 Summary:	Ogg Vorbis output plugin for XMMS
-Summary(pl):	Wtyczka dla XMMS kompresuj±ca wyj¶cie do plików Ogg Vorbis
+Summary(pl):	Wtyczka wyj¶ciowa dla XMMS-a kompresuj±ca wyj¶cie do plików Ogg Vorbis
 Name:		xmms-output-ogg
 Version:	0.2
 Release:	3
@@ -21,11 +21,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is the oggre output plugin for xmms. It enables you to output all
-media played using xmms into the Ogg-Vorbis files.
+media played using XMMS into the Ogg-Vorbis files.
 
 %description -l pl
-To jest wtyczka wyj¶ciowa oggre dla xmms. Umo¿liwia przekierowanie
-wyj¶cia ca³ego d¼wiêku odgrywanego przez xmms do plików Ogg-Vorbis.
+To jest wtyczka wyj¶ciowa oggre dla XMMS-a. Umo¿liwia przekierowanie
+wyj¶cia ca³ego d¼wiêku odgrywanego przez XMMS-a do plików Ogg-Vorbis.
 
 %prep
 %setup -q -n oggre
