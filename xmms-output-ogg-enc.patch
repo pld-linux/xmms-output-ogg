@@ -1,0 +1,12 @@
+diff -ruN oggre./macros/vorbis.m4 oggre/macros/vorbis.m4
+--- oggre./macros/vorbis.m4	Sun Mar 17 20:11:35 2002
++++ oggre/macros/vorbis.m4	Thu Jan 30 19:43:12 2003
+@@ -19,7 +19,7 @@
+     VORBIS_LIBS="-L$vorbis_prefix/lib"
+   fi
+ 
+-  VORBIS_LIBS="$VORBIS_LIBS -lvorbisfile -lvorbis -lm"
++  VORBIS_LIBS="$VORBIS_LIBS -lvorbisfile -lvorbis -lm -lvorbisenc"
+ 
+   AC_MSG_CHECKING(for Vorbis)
+   no_vorbis=""
