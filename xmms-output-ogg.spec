@@ -29,7 +29,7 @@ wyj¶cia ca³ego d¼wiêku odgrywanego przez XMMS-a do plików Ogg-Vorbis.
 
 %prep
 %setup -q -n oggre
-%patch -p1
+%patch0 -p1
 
 %build
 rm -f missing
