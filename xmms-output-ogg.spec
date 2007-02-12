@@ -1,5 +1,5 @@
 Summary:	Ogg Vorbis output plugin for XMMS
-Summary(pl.UTF-8):   Wtyczka wyjściowa dla XMMS-a kompresująca wyjście do plików Ogg Vorbis
+Summary(pl.UTF-8):	Wtyczka wyjściowa dla XMMS-a kompresująca wyjście do plików Ogg Vorbis
 Name:		xmms-output-ogg
 Version:	0.2
 Release:	3
